@@ -1,7 +1,7 @@
 # Raspberry Pi 3 Model B
 [![Build Status](https://travis-ci.org/nerves-project/nerves_system_rpi3.png?branch=master)](https://travis-ci.org/nerves-project/nerves_system_rpi3)
 
-This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
+This is the base Nerves System configuration for the Raspberry Pi 3 Model B with added pigpio support.
 
 ![Fritzing Raspberry Pi 3 image](assets/images/raspberry-pi-3-model-b.png)
 <br><sup>[Image credit](#fritzing)</sup>
@@ -26,16 +26,16 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
-  1. Add nerves_system_rpi3 to your list of dependencies in `mix.exs`:
+  1. Add nerves_system_rpi3_pigpio to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:nerves_system_rpi3, "~> 0.6.1"}]
+          [{:nerves_system_rpi3_pigpio, "~> 0.6.1"}]
         end
 
   2. Ensure nerves_system_rpi3 is started before your application:
 
         def application do
-          [applications: [:nerves_system_rpi3]]
+          [applications: [:nerves_system_rpi3_pigpio]]
         end
 
 ## Built-in WiFi Firmware
